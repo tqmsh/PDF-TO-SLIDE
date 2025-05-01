@@ -1,0 +1,15 @@
+rules_version = '2';
+
+// Storage rules for PDF to Presentation app
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow read access to all files
+    match /{allPaths=**} {
+      allow read: if true;  // Anyone can read files
+      allow write: if request.resource.size < 20 * 1024 * 1024  // Limit uploads to 20MB
+                   && (request.resource.contentType.matches('application/pdf') 
+                      || request.resource.contentType.matches('application/.*') 
+                      || request.resource.contentType.matches('text/.*'));
+    }
+  }
+}

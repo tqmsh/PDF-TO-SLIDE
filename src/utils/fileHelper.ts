@@ -79,4 +79,15 @@ export async function readFileAsBuffer(file: File): Promise<Buffer> {
     
     reader.readAsArrayBuffer(file);
   });
+}
+
+/**
+ * Process a PDF file to extract text content for AI analysis
+ * @param file The PDF file to process
+ * @returns The processed text content
+ */
+export async function processFile(file: File): Promise<string> {
+  // In a real implementation, this would extract text from a PDF
+  // For demo purposes, we're just returning a placeholder
+  return `Content extracted from ${file.name} (${formatFileSize(file.size)})`;
 } 

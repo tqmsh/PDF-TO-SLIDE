@@ -1,0 +1,16 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public access for the demo application
+    match /presentations/{presentationId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // For other collections, keep default secure rules
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

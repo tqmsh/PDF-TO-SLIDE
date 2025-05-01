@@ -17,16 +17,16 @@ export default function Home() {
           </div>
           <div className="flex items-center space-x-4">
             <Link 
-              href="/signin" 
-              className="btn-secondary"
+              href="/how-it-works" 
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
             >
-              Sign In
+              How It Works
             </Link>
             <Link 
-              href="/signup" 
+              href="/dashboard" 
               className="btn-primary"
             >
-              Sign Up
+              Get Started
             </Link>
           </div>
         </div>
@@ -130,13 +130,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Documents?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-            Join thousands of professionals who save time with SlideCraft AI.
+            Convert your PDF documents into beautiful presentations in just a few clicks.
           </p>
           <button 
-            onClick={() => router.push('/signup')}
+            onClick={() => router.push('/dashboard')}
             className="bg-white hover:bg-gray-100 text-primary-600 font-bold py-3 px-8 rounded-md shadow-lg text-lg"
           >
-            Get Started for Free
+            Try It Now
           </button>
         </div>
       </section>
@@ -155,7 +155,6 @@ export default function Home() {
               <h4 className="text-lg font-semibold mb-4">Product</h4>
               <ul className="space-y-2">
                 <li><Link href="/features" className="text-gray-400 hover:text-white">Features</Link></li>
-                <li><Link href="/pricing" className="text-gray-400 hover:text-white">Pricing</Link></li>
                 <li><Link href="/how-it-works" className="text-gray-400 hover:text-white">How It Works</Link></li>
               </ul>
             </div>
@@ -164,7 +163,6 @@ export default function Home() {
               <ul className="space-y-2">
                 <li><Link href="/support" className="text-gray-400 hover:text-white">Support</Link></li>
                 <li><Link href="/docs" className="text-gray-400 hover:text-white">Documentation</Link></li>
-                <li><Link href="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
               </ul>
             </div>
             <div>
@@ -172,7 +170,6 @@ export default function Home() {
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
                 <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-                <li><Link href="/legal" className="text-gray-400 hover:text-white">Legal</Link></li>
               </ul>
             </div>
           </div>

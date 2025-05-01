@@ -2,9 +2,11 @@
 /node_modules
 /.pnp
 .pnp.js
+/.yarn/
 
 # testing
 /coverage
+/test-results/
 
 # next.js
 /.next/
@@ -12,18 +14,25 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
 *.pem
+Thumbs.db
+.env
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
 # local env files
 .env*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
@@ -34,15 +43,43 @@ next-env.d.ts
 
 # IDE/Editor folders
 .idea/
-.vscode/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 *.swp
 *.swo
+*.sublime-*
+.project
+.classpath
+.c9/
+*.launch
+.settings/
 
 # Generated files
 public/sitemap.xml
 public/robots.txt
+public/feed.xml
 
 # Temp files
 .temp
 .tmp
-.cache/ 
+.cache/
+*.temp.*
+*~
+
+# Firebase
+firebase-debug.log
+.firebase/
+firestore-debug.log
+ui-debug.log
+
+# Marp temporary files
+.marp-tmp/
+
+# System files that might be created during development
+.directory
+desktop.ini
+
+# Logs
+logs
+*.log 

@@ -78,11 +78,11 @@ export default function FileUpload({
           </div>
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-300">
             {isDragActive
-              ? 'Drop the file here...'
+              ? 'Drop the PDF file here...'
               : 'Drag and drop your PDF here, or click to browse'}
           </p>
           <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
-            Accepted formats: {acceptedFileTypes.join(', ')} (Max size: {formatFileSize(maxSize)})
+            Accepted formats: {acceptedFileTypes.map(type => type.split('/')[1]).join(', ')} (Max size: {formatFileSize(maxSize)})
           </p>
           <button className="mt-4 btn-primary">
             Select File
@@ -93,7 +93,7 @@ export default function FileUpload({
           )}
         </div>
       ) : (
-        <div className="border rounded-lg p-4">
+        <div className="border rounded-lg p-4 bg-white dark:bg-gray-800">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="h-10 w-10 flex-shrink-0 rounded bg-primary-100 dark:bg-primary-900 flex items-center justify-center">
@@ -123,7 +123,8 @@ export default function FileUpload({
             </div>
             <button 
               onClick={handleRemoveFile}
-              className="ml-4 text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400"
+              aria-label="Remove file"
+              className="ml-4 text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
